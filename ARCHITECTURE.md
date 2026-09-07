@@ -1,5 +1,10 @@
 # ARCHITECTURE — Novos Clássicos Persona Lab
 
+> Estado no Dia 0: somente planejamento, sem componentes implementados. Whisper,
+> pyannote, ECAPA e demais tecnologias citadas são candidatos a avaliar, não escolhas
+> definitivas. Seleções devem ser sustentadas por experimentos e ADRs; o estado real
+> fica em [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md).
+
 ## 1. Arquitetura-alvo
 
 ```text
@@ -87,7 +92,10 @@ Toda unidade deve ser rastreável:
 Nunca usar fine-tuning como banco de fatos.
 
 ### 2.3 Speaker isolation
-Nenhum componente de retrieval do agente Antoun deve recuperar Pessoa sem intenção explícita.
+Nenhum componente de retrieval do agente Antoun deve recuperar Pessoa sem intenção explícita,
+e vice-versa. Mesmo em comparações, preservar a atribuição da evidência.
+Speakers válidos: `antoun`, `pessoa`, `guest`, `unknown`.
+Baixa confiança deve virar `unknown`, nunca palpite.
 
 ### 2.4 Temporalidade
 Toda evidência carrega data. “Atual” e “histórico” são consultas diferentes.
@@ -102,6 +110,8 @@ Toda resposta importante deve poder ser classificada como:
 ASR, embedding, reranker, LLM e classificadores devem ficar atrás de interfaces simples.
 
 ## 3. Schema canônico mínimo
+
+Proposta a validar na Fase 0. O exemplo abaixo é ilustrativo, não um registro coletado.
 
 ```json
 {
@@ -141,6 +151,10 @@ ASR, embedding, reranker, LLM e classificadores devem ficar atrás de interfaces
 
 ## 4. Estrutura sugerida do repositório
 
+Expansão futura, conforme as fases. A estrutura efetivamente preparada no Dia 0 está
+em [INITIAL_REPO_TREE.md](INITIAL_REPO_TREE.md); Makefile, pyproject.toml e módulos
+abaixo ainda não existem.
+
 ```text
 .
 ├── README.md
@@ -149,6 +163,10 @@ ASR, embedding, reranker, LLM e classificadores devem ficar atrás de interfaces
 ├── ARCHITECTURE.md
 ├── EXPERIMENTS.md
 ├── RESOURCES.md
+├── INITIAL_REPO_TREE.md
+├── PROJECT_CONTEXT.md
+├── AGENTS.md
+├── CONTRIBUTING.md
 ├── Makefile
 ├── pyproject.toml
 ├── configs/
@@ -172,7 +190,8 @@ ASR, embedding, reranker, LLM e classificadores devem ficar atrás de interfaces
 └── docs/
     ├── research/
     ├── journal/
-    └── adr/
+    ├── adr/
+    └── checkpoints/
 ```
 
 ## 5. Hugging Face como backbone

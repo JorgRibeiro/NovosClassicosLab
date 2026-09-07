@@ -2,6 +2,16 @@
 
 > Programa intensivo de 90 dias para construir uma plataforma de personas fundamentadas em corpus público, usando Speech AI, NLP, Information Retrieval, RAG, PEFT, pós-treinamento, agentes, avaliação e MLOps — com o ecossistema Hugging Face como eixo principal.
 
+## Estado atual
+
+**Dia 0 — inicialização do repositório.** Estrutura documental preparada; nenhum
+código de produto, dataset coletado ou experimento executado. Modelos e infraestrutura
+citados nos planos são candidatos, ainda sem escolha definitiva.
+
+Para retomar o trabalho, consulte [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) e siga a
+ordem de leitura em [AGENTS.md](AGENTS.md). O repositório é a fonte da verdade para
+ChatGPT como mentor, Codex como engenheiro e desenvolvimento manual.
+
 ## Visão
 
 O objetivo não é simplesmente “treinar duas LLMs”. O projeto deverá produzir:
@@ -28,13 +38,19 @@ Nenhuma tecnologia entra no sistema apenas porque “é popular”. Sempre que p
 
 ## Documentos principais
 
+- [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) — snapshot resumido do estado atual.
+- [AGENTS.md](AGENTS.md) — regras e ordem de leitura para agentes.
+- [CONTRIBUTING.md](CONTRIBUTING.md) — fluxo de colaboração e commits semânticos.
+- [INITIAL_REPO_TREE.md](INITIAL_REPO_TREE.md) — estrutura inicial real e expansão prevista.
+- [docs/checkpoints/TEMPLATE.md](docs/checkpoints/TEMPLATE.md) — snapshots semanais imutáveis.
+- [experiments/](experiments/) — futuros relatórios e evidências por EXP-ID.
 - [ROADMAP_90_DIAS.md](ROADMAP_90_DIAS.md) — execução diária e semanal.
 - [LEARNING_ROADMAP.md](LEARNING_ROADMAP.md) — trilha conceitual.
 - [ARCHITECTURE.md](ARCHITECTURE.md) — arquitetura-alvo e princípios.
 - [EXPERIMENTS.md](EXPERIMENTS.md) — metodologia de experimentação.
 - [RESOURCES.md](RESOURCES.md) — livros, papers, cursos, vídeos e documentação.
 - [docs/research/RESEARCH_TRACK.md](docs/research/RESEARCH_TRACK.md) — hipóteses de IC/TCC.
-- [docs/journal/TEMPLATE.md](docs/journal/TEMPLATE.md) — diário técnico.
+- [docs/journal/TEMPLATE.md](docs/journal/TEMPLATE.md) — trajetória de aprendizado; não representa o estado atual.
 - [docs/adr/TEMPLATE.md](docs/adr/TEMPLATE.md) — Architecture Decision Record.
 
 ## Critério de sucesso dos 90 dias

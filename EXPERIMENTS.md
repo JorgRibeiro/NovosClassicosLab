@@ -8,10 +8,26 @@ Não registrar “testei modelo X”. Registrar:
 
 > O modelo X melhora a métrica Y comparado ao baseline Z no dataset V?
 
+## Registro e ciclo de vida
+
+No Dia 0, nenhum experimento foi executado. Os IDs abaixo estão reservados para
+experimentos planejados; modelos e datasets citados não foram selecionados/criados.
+
+Ao iniciar, copiar o template para `experiments/EXP-XXX-nome.md` e adicionar o link
+a este registro. Conferir IDs existentes antes de reservar um novo. Usar status
+`planned`, `running`, `completed` ou `aborted`; preservar resultados negativos e
+execuções interrompidas. Não promover candidatos nem substituir baseline sem evidência.
+Decisões de arquitetura resultantes devem apontar para o relatório a partir de um ADR.
+
 ## Template
 
 ```markdown
 # EXP-XXX — Nome
+
+- Status: planned | running | completed | aborted
+- Data:
+- Fase / dia:
+- ADR relacionado: N/A se não houver
 
 ## Pergunta
 ...
@@ -80,6 +96,7 @@ Não registrar “testei modelo X”. Registrar:
 - EXP-022 bertimbau-topic
 - EXP-023 entity-extraction
 - EXP-024 stance-baseline
+- EXP-025 tfidf-speaker-from-text-baseline
 
 ### Retrieval
 - EXP-040 bm25

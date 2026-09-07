@@ -3,6 +3,9 @@
 > Prioridade: documentação oficial → papers originais → cursos/livros → tutoriais.
 
 As bibliotecas e modelos mudam. Fixe versões/revisions usadas em cada experimento.
+Os itens abaixo são referências de estudo e candidatos para avaliação; não representam
+seleções definitivas. Verifique documentação, acesso e compatibilidade ao iniciar cada
+experimento. Decisões e resultados pertencem a ADRs e experimentos.
 
 ---
 
@@ -120,7 +123,7 @@ https://arxiv.org/abs/2212.04356
 
 ## pyannote
 
-### Pipeline atual recomendado para baseline
+### Pipeline candidato para baseline
 `pyannote/speaker-diarization-community-1`
 
 https://huggingface.co/pyannote/speaker-diarization-community-1
@@ -138,7 +141,7 @@ https://colab.research.google.com/github/pyannote/pyannote-audio/blob/develop/tu
 
 ## Speaker recognition
 
-Baseline:
+Candidato a baseline:
 `speechbrain/spkrec-ecapa-voxceleb`
 
 https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb

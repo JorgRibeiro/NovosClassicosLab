@@ -1,5 +1,13 @@
 # ROADMAP DE 90 DIAS — Novos Clássicos Persona Lab
 
+## Estado inicial — Dia 0
+
+Preparação documental anterior aos Dias 1–3. Nenhuma fase técnica foi concluída.
+O estado atual fica em [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md); a estrutura preparada
+está em [INITIAL_REPO_TREE.md](INITIAL_REPO_TREE.md).
+Modelos, bibliotecas e infraestrutura citados são candidatos a experimentação, sem
+escolha definitiva até registro de evidência e ADR. As tarefas abaixo são planejamento.
+
 ## Como usar este arquivo
 
 Este é o arquivo que deve ficar aberto durante o projeto.
@@ -31,7 +39,12 @@ A cada 7 dias:
 - rode testes;
 - atualize métricas;
 - escreva retrospectiva;
-- corte escopo se necessário.
+- corte escopo se necessário;
+- crie `docs/checkpoints/week-XX.md` com o [template](docs/checkpoints/TEMPLATE.md);
+- atualize PROJECT_CONTEXT.md com o estado atual e o link do último checkpoint.
+
+O primeiro checkpoint será criado ao final do primeiro sprint (revisão do Dia 7).
+Checkpoints são históricos imutáveis; não antecipar week-01 no Dia 0.
 
 ---
 
@@ -296,7 +309,7 @@ Responder com qualidade: “quem falou quando?”.
 ## Dias 24–30
 
 ### Meta
-Converter `SPEAKER_00` em `antoun/pessoa/guest`.
+Converter `SPEAKER_00` em `antoun/pessoa/guest/unknown`; baixa confiança resulta em `unknown`.
 
 ### Dia 24 — Speaker embeddings
 - [ ] Estudar verification vs identification.
@@ -360,7 +373,7 @@ Se isso não estiver sólido, **não avance para fine-tuning**.
 - [ ] Estudar TF-IDF.
 - [ ] Implementar TF-IDF.
 - [ ] Logistic Regression speaker-from-text.
-- [ ] EXP-020.
+- [ ] EXP-025 (speaker-from-text; distinto de EXP-020, baseline de tópicos).
 
 ### Dia 32 — Topics zero-shot
 - [ ] Estudar NLI.
@@ -372,7 +385,8 @@ Se isso não estiver sólido, **não avance para fine-tuning**.
 ### Dia 33 — BERTimbau
 - [ ] Estudar encoder BERT.
 - [ ] Fine-tunar classificador pequeno se houver labels.
-- [ ] Comparar TF-IDF vs zero-shot vs BERT.
+- [ ] Comparar TF-IDF vs zero-shot vs BERT para tópicos, no mesmo dataset/split.
+- [ ] EXP-020 para o baseline TF-IDF de tópicos, separado do speaker-from-text do Dia 31.
 - [ ] EXP-022.
 
 ### Dia 34 — Entity extraction
@@ -498,6 +512,7 @@ Construir benchmark de busca antes de RAG.
 - [ ] generate;
 - [ ] resposta.
 - [ ] Sem persona ainda.
+- [ ] EXP-060.
 
 ### Dia 50 — Speaker filters
 - [ ] `speaker=antoun`.
@@ -517,6 +532,7 @@ Construir benchmark de busca antes de RAG.
 - [ ] `UNSUPPORTED`.
 - [ ] Criar prompts e regras.
 - [ ] Perguntas propositalmente sem evidência.
+- [ ] EXP-064.
 
 ### Dia 53 — Temporal retrieval
 - [ ] `date <= cutoff`.
@@ -788,6 +804,9 @@ Já deve existir um produto útil mesmo sem persona:
 
 # CHECKPOINTS
 
+Os marcos abaixo são expectativas de progresso, complementares aos snapshots semanais
+em docs/checkpoints/. Não comprovam conclusão.
+
 ## Dia 14
 Esperado:
 - ambiente;
@@ -831,7 +850,8 @@ Esperado:
 
 # RETROSPECTIVA SEMANAL
 
-Copie toda semana:
+Use estas perguntas no journal e na seção de aprendizado do checkpoint semanal.
+O snapshot completo deve seguir [docs/checkpoints/TEMPLATE.md](docs/checkpoints/TEMPLATE.md):
 
 ```markdown
 ## Semana X
