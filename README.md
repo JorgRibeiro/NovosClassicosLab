@@ -4,9 +4,14 @@
 
 ## Estado atual
 
-**Dia 0 — inicialização do repositório.** Estrutura documental preparada; nenhum
-código de produto, dataset coletado ou experimento executado. Modelos e infraestrutura
-citados nos planos são candidatos, ainda sem escolha definitiva.
+**Dia 1 — fundação de engenharia.** Pacote Python mínimo, ambiente uv com lockfile,
+pytest, Ruff e CI configurados. Teste, import, lint e formatter validados localmente;
+CI remoto ainda pendente. Sem código de produto, datasets ou bibliotecas de ML.
+Modelos e infraestrutura de ML continuam candidatos.
+
+Comandos: `uv sync --locked`, `uv run --locked pytest`, `uv run --locked ruff check .`
+e `uv run --locked ruff format --check .`. Veja [CONTRIBUTING.md](CONTRIBUTING.md)
+para pré-requisitos e fluxo completo.
 
 Para retomar o trabalho, consulte [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) e siga a
 ordem de leitura em [AGENTS.md](AGENTS.md). O repositório é a fonte da verdade para

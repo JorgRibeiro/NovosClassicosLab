@@ -1,0 +1,53 @@
+# Ambientes e caches Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+build/
+dist/
+*.egg-info/
+
+# Notebooks: versionar notebooks, não checkpoints automáticos
+.ipynb_checkpoints/
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Artefatos locais: manter manifests, configs e metadados fora destas áreas
+/data/local/
+/models/
+/artifacts/
+/outputs/
+/tmp/
+/.cache/
+/.huggingface/
+/wandb/
+/mlruns/
+
+# Áudio, vídeo e pesos (não ignorar JSON/JSONL/CSV/Parquet genericamente)
+*.wav
+*.mp3
+*.flac
+*.m4a
+*.ogg
+*.mp4
+*.webm
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.gguf
+
+# Não ignorar docs/checkpoints/, experiments/, configs/, manifests ou data/gold/.

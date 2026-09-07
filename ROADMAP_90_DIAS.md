@@ -1,8 +1,9 @@
 # ROADMAP DE 90 DIAS — Novos Clássicos Persona Lab
 
-## Estado inicial — Dia 0
+## Estado atual — Dia 1
 
-Preparação documental anterior aos Dias 1–3. Nenhuma fase técnica foi concluída.
+Fundação Python validada localmente; CI configurado, ainda sem execução remota.
+Fase 0 em andamento; estudos não aferidos e Dia 2 não iniciado.
 O estado atual fica em [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md); a estrutura preparada
 está em [INITIAL_REPO_TREE.md](INITIAL_REPO_TREE.md).
 Modelos, bibliotecas e infraestrutura citados são candidatos a experimentação, sem
@@ -62,26 +63,26 @@ Criar o repositório, ambiente, documentação e entender a arquitetura antes de
 - [ ] Entender encoder, decoder e encoder-decoder em nível conceitual.
 
 #### Implementação
-- [ ] Criar repositório Git.
-- [ ] Criar ambiente Python.
-- [ ] Definir gerenciador (`uv`, `poetry` ou pip/venv).
-- [ ] Adicionar lint/formatter.
-- [ ] Criar estrutura de pastas.
-- [ ] Criar `.env.example`.
-- [ ] Criar `.gitignore`.
-- [ ] Criar primeiro CI simples.
+- [x] Criar repositório Git.
+- [x] Criar ambiente Python.
+- [x] Definir gerenciador (`uv`, `poetry` ou pip/venv).
+- [x] Adicionar lint/formatter.
+- [x] Criar estrutura de pastas.
+- [x] Criar `.env.example`.
+- [x] Criar `.gitignore`.
+- [x] Criar primeiro CI simples.
 - [ ] Criar conta/configurar Hugging Face Hub.
 - [ ] Nunca commitar tokens.
 
 #### Documentação
-- [ ] Registrar ADR-0001: stack inicial.
-- [ ] Criar journal Dia 1.
-- [ ] Registrar hardware disponível.
+- [x] Registrar ADR-0001: stack inicial.
+- [x] Criar journal Dia 1.
+- [x] Registrar hardware disponível.
 
 #### DoD
-- [ ] `pytest` roda.
-- [ ] lint roda.
-- [ ] import básico do projeto funciona.
+- [x] `pytest` roda.
+- [x] lint roda.
+- [x] import básico do projeto funciona.
 - [ ] primeiro commit limpo.
 
 ---

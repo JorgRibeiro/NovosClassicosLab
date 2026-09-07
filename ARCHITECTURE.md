@@ -1,6 +1,6 @@
 # ARCHITECTURE — Novos Clássicos Persona Lab
 
-> Estado no Dia 0: somente planejamento, sem componentes implementados. Whisper,
+> Estado no Dia 1: fundação Python configurada, sem componentes de produto. Whisper,
 > pyannote, ECAPA e demais tecnologias citadas são candidatos a avaliar, não escolhas
 > definitivas. Seleções devem ser sustentadas por experimentos e ADRs; o estado real
 > fica em [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md).
@@ -151,9 +151,11 @@ Proposta a validar na Fase 0. O exemplo abaixo é ilustrativo, não um registro 
 
 ## 4. Estrutura sugerida do repositório
 
-Expansão futura, conforme as fases. A estrutura efetivamente preparada no Dia 0 está
-em [INITIAL_REPO_TREE.md](INITIAL_REPO_TREE.md); Makefile, pyproject.toml e módulos
-abaixo ainda não existem.
+Expansão futura, conforme as fases. A estrutura atual está em
+[INITIAL_REPO_TREE.md](INITIAL_REPO_TREE.md). pyproject.toml e o pacote mínimo já
+existem; Makefile e módulos de produto abaixo ainda não existem. A organização
+interna futura será sob src/novos_classicos_lab/, conforme
+[ADR-0001](docs/adr/ADR-0001-python-project-structure.md).
 
 ```text
 .

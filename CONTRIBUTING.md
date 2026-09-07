@@ -15,7 +15,38 @@ Comece pela ordem de leitura em [AGENTS.md](AGENTS.md) e pelo snapshot em
 
 Somente o usuário decide quando marcar um conceito em LEARNING_ROADMAP.md.
 Materiais de estudo ficam em RESOURCES.md; questões científicas, em docs/research/.
-Não há comandos de setup/teste de produto disponíveis no Dia 0; defini-los no Dia 1.
+## Ambiente e comandos
+
+Pré-requisito: uv 0.11.7 (versão também fixada no CI). Python 3.11.14 está fixado em
+.python-version; `uv python install` pode instalá-lo se não estiver disponível.
+
+```bash
+uv python install
+uv sync --locked
+uv run --locked pytest
+uv run --locked ruff check .
+uv run --locked ruff format --check .
+uv run --locked ruff format .
+uv run --locked python -c 'import novos_classicos_lab; print(novos_classicos_lab.__version__)'
+```
+
+Para executar `pytest` diretamente: `source .venv/bin/activate`, depois `pytest`.
+Use o interpretador `.venv/bin/python` no editor.
+
+Versionar pyproject.toml, .python-version e uv.lock juntos. Após uma mudança intencional
+nas dependências, executar `uv lock`, revisar o diff e validar novamente. Não usar
+pip global para instalar dependências deste projeto. O grupo dev é incluído por padrão;
+runtime permanece sem dependências. Type checker adiado conforme ADR-0001.
+
+Dados locais não versionáveis devem ficar em `data/local/`; pesos em `models/` e
+saídas temporárias em `outputs/` ou `artifacts/`. Manifests e metadados ficam fora
+dessas áreas, por exemplo `data/manifests/` e `experiments/`. `data/gold/` não está
+ignorado: revisar conteúdo e permissão antes de versionar. Checkpoints documentais
+em docs/checkpoints/ continuam versionáveis. `.env.example` não contém credenciais e
+não precisa ser copiado no Dia 1. O pacote não carrega `.env` automaticamente.
+
+CI: [.github/workflows/ci.yml](.github/workflows/ci.yml), em push/pull request,
+sem modelos ou GPU. Sua execução remota depende do envio ao GitHub.
 
 ## Ponte entre ChatGPT, Codex e trabalho manual
 

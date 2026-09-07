@@ -5,37 +5,40 @@ Atualizado em: 2026-09-07.
 
 ## Current Phase
 
-- Phase: Repository initialization — preparação documental anterior à Fase 0.
-- Day: 0.
-- Sprint: Not started.
+- Phase: Fase 0 — preparação e baseline mental.
+- Day: 1.
+- Sprint: 1.
 - Status: No product code implemented.
 
 ## Current Objective
 
-Estabelecer documentação e memória para os 90 dias de desenvolvimento de duas
-personas independentes, Antoun e Pessoa, fundamentadas no corpus público do
-Novos Clássicos Show. Ciclo: ESTUDAR → IMPLEMENTAR → MEDIR → DOCUMENTAR → REVISAR.
+Preparar a fundação de engenharia Python do Persona Lab. DoD técnico local do Dia 1
+validado; CI configurado e ainda não executado remotamente. Dia 2 não iniciado.
 
 ## Completed
 
 - Documentos de arquitetura, execução, estudos e pesquisa disponíveis.
 - Regras para agentes, contribuição e snapshot atual documentados.
 - Template de checkpoint e diretórios iniciais preparados.
-- Nenhuma fase técnica concluída.
+- Pacote instalável, teste de import, lint/formatter, lockfile, gitignore e env.example.
+- CI mínimo configurado; ADR-0001 e journal do Dia 1 registrados.
+- Fase 0 ainda em andamento; estudos pessoais não aferidos.
 
 ## In Progress
 
-Nenhuma implementação ou experimento em andamento.
+Entrega de engenharia do Dia 1 pronta para revisão/commit; nenhum experimento em andamento.
 
 ## Next
 
-Iniciar o Dia 1 da [Fase 0](ROADMAP_90_DIAS.md): preparar ambiente Python,
-definir gerenciador, configurar ferramentas de qualidade e registrar a stack em ADR.
-Confirmar hardware disponível. Aprendizagem será avaliada pelo usuário.
+Revisar/commitar a entrega e acompanhar o primeiro CI remoto. Estudos e configuração
+do Hub pendentes. Dia 2 reservado a Hub/Datasets, dataset dummy e schema, sem execução agora.
 
 ## Current Architecture
 
-Somente [arquitetura-alvo](ARCHITECTURE.md); nenhum componente implementado.
+[Arquitetura-alvo](ARCHITECTURE.md) ainda sem componentes de produto implementados.
+Fundação: pacote src/novos_classicos_lab, versão 0.1.0, sem dependências de runtime.
+Ambiente: uv 0.11.7, Python 3.11.14 (faixa >=3.11,<3.12), pytest 9.1.1, Ruff 0.15.22.
+Build: Hatchling 1.29.0. Instalação: `uv sync --locked`; versões em uv.lock.
 Fluxo previsto: ingestão → speech → corpus → NLP → retrieval → RAG → personas → avaliação.
 WHAT = corpus + retrieval + evidências; HOW = estilo + persona + adapters.
 Antoun e Pessoa permanecem isolados; evidências preservam fonte e timestamp.
@@ -68,12 +71,13 @@ N/A — nenhuma medição realizada.
 
 ## Known Problems
 
-Ambiente Python, testes, lint, CI e hardware ainda não configurados/documentados.
+CI remoto ainda não executado. Entrega do Dia 1 ainda sem commit.
+Hardware registrado no [journal](docs/journal/day-01.md); GPU não validada para ML.
 Não há falhas de produto observadas, pois não há produto implementado.
 
 ## Constraints
 
-- Escopo atual: preparação documental; sem coleta, código de ML ou instalação de bibliotecas.
+- Escopo atual: fundação de engenharia do Dia 1; sem coleta, modelos ou código de produto.
 - Planejamento de aproximadamente 90 dias; priorizar dados, speech, retrieval, RAG e avaliação.
 - Nunca treinar com gold dataset nem substituir baseline sem evidência.
 - Baixa confiança de speaker resulta em `unknown`; não inventar posições.
@@ -83,7 +87,8 @@ Não há falhas de produto observadas, pois não há produto implementado.
 
 Organização documental definida pelo pedido inicial: estado atual aqui, decisões em
 ADRs, evidências em experimentos e snapshots históricos em checkpoints.
-Nenhum ADR técnico aceito; stack e modelos continuam pendentes.
+[ADR-0001](docs/adr/ADR-0001-python-project-structure.md) aceito: uv, Python 3.11,
+pytest e Ruff. Type checker adiado; modelos continuam pendentes.
 
 ## Last Checkpoint
 
